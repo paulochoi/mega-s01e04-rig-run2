@@ -28,7 +28,22 @@ Read first: `docs/vision.md`, `docs/styleguide.md`. Decisions: `docs/adr/`.
    ```
 
 5. An issue is closed only when its "Done when" holds. If it can't hold yet, leave it open and
-   say what it waits on.
+   say what it waits on. A step that waits on someone else (a reviewer, a host, another team)
+   holds only once they confirm: sending is not done.
+
+## What every issue carries
+
+Decided by the repo owner on 2026-11-23 for plan morning-digest; use it for every plan unless
+the plan says otherwise. The skill `plan-to-issues` reads this instead of asking again.
+
+- First line: `Source: plan.md § <n>` (the plan section it comes from).
+- Label: `plan:<plan name from plan.md frontmatter>`, e.g. `plan:morning-digest`.
+- Body sections, in this order:
+  - `## Scope`: what to build, in the plan's words; nothing the plan doesn't say.
+  - `## Done when`: the plan's checkable condition.
+  - `## Blocked by`: real issue numbers (`#1`), or `—`.
+  - `## Model`: the suggested model and why (strongest for logic, cheaper for views and tests).
+- Closed with the closing comment above.
 
 ## Skills
 
